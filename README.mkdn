@@ -1,21 +1,26 @@
-Code-Android-Fiber (CAF)
-========================
+Downloading the Source
+===
+1. Repo sync all code with default.xml
+`repo init -u git://github.com/CodeAndroidFiber/platform_manifest.git -b oneplusX/6.0.1`
+`repo sync`
 
-A project for OnePlus X based upon clean Code-Aurora-Forum Android (which is optimized Google AOSP for Qualcomm Snapdragon devices).
-For now thats the only device supported by this project but who says expanding isn't an option? ;)
-
-Getting started
----------------
-
-Initializing and syncing the project:
-
-    repo init -u git://github.com/CodeAndroidFiber/platform_manifest.git -b mm_onyx
-    repo sync
-
-
-Android for MSM
----------------
-
-CAF-Manifest Tag:
-
-    LA.BF.1.1.3-01210-8x74.0
+Building the System
+===
+**[Set up environment]**
+Initialize the environment with the envsetup.sh script.
+`$ . build/envsetup.sh`
+**[Choose a Target]**
+Choose which target to build with lunch.
+`$ lunch`
+Choose `aosp_onyx-user`
+**[Build the code]**
+Build everything with make. GNU make can handle parallel tasks with a -jN argument.
+`$ make -j4`
+**[Flash a Device]**
+Let device enter fastboot mode, run
+`$ adb reboot bootloader`
+Once the device is in fastboot mode, run
+`$ fastboot flash boot boot.img`
+`$ fastboot flash system system.img`
+If you want flash new /data partition, run
+`$ fastboot flash userdata userdata.img`
