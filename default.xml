@@ -2,37 +2,37 @@
 <manifest>
   <remote  name="caf"
 	   fetch="git://codeaurora.org/"
-	   review="codeaurora.org"/>
+	   review="codeaurora.org" />
   <remote  name="github"
-	   fetch="https://github.com/" />
+	   fetch="https://github.com/"
+	   revision="oneplusX/6.0.1" />
+
   <default remote="caf" 
-	   revision="LA.BF.1.1.3_rb1.12"/>
+	   revision="LA.BF.1.1.3_rb1.12" />
+  
+  <!-- CodeAndroidFiber -->
+  <project name="CodeAndroidFiber/platform_art" path="art" remote="github" />
+  <project name="CodeAndroidFiber/platform_build" path="build" remote="github" >
+    <copyfile dest="Makefile" src="core/root.mk"/>
+  </project>
+  <project name="CodeAndroidFiber/platform_external_skia" path="external/skia" remote="github" />
+  <project name="CodeAndroidFiber/platform_frameworks_base" path="frameworks/base" remote="github" />
+  <project name="CodeAndroidFiber/platform_hardware_qcom_audio" path="hardware/qcom/audio" remote="github" />
+  <project name="CodeAndroidFiber/platform_hardware_qcom_bt" path="hardware/qcom/bt" remote="github" />
+  <project name="CodeAndroidFiber/platform_hardware_qcom_camera" path="hardware/qcom/camera" remote="github" />
+  <project name="CodeAndroidFiber/platform_hardware_qcom_wlan" path="hardware/qcom/wlan" remote="github" />
+  <project name="CodeAndroidFiber/platform_hardware_ril" path="hardware/ril" remote="github" />
+  <project name="CodeAndroidFiber/platform_packages_services_Telephony" path="packages/services/Telephony" remote="github" />
 
   <!-- device -->
-  <project name="CodeAndroidFiber/platform_device_qcom_common" path="device/qcom/common" remote="github" revision="oneplusX/6.0.1">
+  <project name="CodeAndroidFiber/platform_device_qcom_common" path="device/qcom/common" remote="github">
     <copyfile dest="build.sh" src="build.sh"/>
     <copyfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
   </project>
-  <project name="CodeAndroidFiber/platform_device_oneplus_onyx" path="device/oneplus/onyx" remote="github" revision="oneplusX/6.0.1" />
-  <project name="CodeAndroidFiber/platform_kernel_oneplus_msm8974" path="kernel" remote="github" revision="oneplusX/6.0.1" />
-  <project name="CodeAndroidFiber/platform_vendor_oneplus" path="vendor/oneplus" remote="github" revision="oneplusX/6.0.1" />
-  
-  <!-- CodeAndroidFiber -->
-  <project groups="pdk" name="CodeAndroidFiber/platform_build" path="build" remote="github" revision="oneplusX/6.0.1">
-    <copyfile dest="Makefile" src="core/root.mk"/>
-  </project>
-  <project groups="pdk-cw-fs" name="CodeAndroidFiber/platform_frameworks_base" path="frameworks/base" remote="github" revision="oneplusX/6.0.1"/>
-  <project name="CodeAndroidFiber/platform_packages_services_Telephony" path="packages/services/Telephony" remote="github" revision="oneplusX/6.0.1" />
-
-  <!-- OnePlusOSS -->
-  <project groups="pdk" name="OnePlusOSS/android_art" path="art" remote="github" revision="oneplusX/6.0.1" />
-  <project name="OnePlusOSS/android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="github" revision="oneplusX/6.0.1" />
-  <project groups="pdk,qcom_msm8x26" name="OnePlusOSS/android_external_skia" path="external/skia" remote="github" revision="oneplusX/6.0.1"/>
-  <project groups="qcom,default" name="OnePlusOSS/android_hardware_qcom_audio" path="hardware/qcom/audio" remote="github" revision="oneplusX/6.0.1"/>
-  <project groups="qcom,default" name="OnePlusOSS/android_hardware_qcom_bt" path="hardware/qcom/bt" remote="github" revision="oneplusX/6.0.1"/>
-  <project groups="qcom,default" name="OnePlusOSS/android_hardware_qcom_camera" path="hardware/qcom/camera" remote="github" revision="oneplusX/6.0.1"/>
-  <project groups="qcom,default" name="OnePlusOSS/android_hardware_qcom_wlan" path="hardware/qcom/wlan" remote="github" revision="oneplusX/6.0.1"/>
-  <project groups="pdk" name="OnePlusOSS/android_hardware_ril" path="hardware/ril" remote="github" revision="oneplusX/6.0.1"/>
+  <project name="CodeAndroidFiber/platform_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="github" />
+  <project name="CodeAndroidFiber/platform_device_oneplus_onyx" path="device/oneplus/onyx" remote="github" />
+  <project name="CodeAndroidFiber/platform_kernel_oneplus_msm8974" path="kernel" remote="github" />
+  <project name="CodeAndroidFiber/platform_vendor_oneplus" path="vendor/oneplus" remote="github" />
 
   <!-- CAF/AOSP -->
   <project groups="pdk-cw-fs" name="device/common" revision="59222307bea10506e1f4814bf6687fb4cdcddabe" upstream="LA.BF.1.1.3_rb1.12"/>
