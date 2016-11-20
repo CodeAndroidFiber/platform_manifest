@@ -12,15 +12,20 @@
   
   <!-- CodeAndroidFiber -->
   <project name="CodeAndroidFiber/platform_art" path="art" remote="github" />
+  <project name="CodeandroidFiber/platform_bootable_recovery" path="bootable/recovery" remote="github" />
   <project name="CodeAndroidFiber/platform_build" path="build" remote="github" >
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
   <project name="CodeAndroidFiber/platform_external_conscrypt" path="external/conscrypt" remote="github" />
+  <project name="CodeAndroidFiber/platform_external_dhcpcd" path="external/dhcpcd" remote="github" />
   <project name="CodeandroidFiber/platform_external_libavc" path="external/libavc" remote="github" />
   <project name="CodeAndroidFiber/platform_external_libmpeg2" path="external/libmpeg2" remote="github" />
+  <project name="CodeAndroidFiber/platform_external_sepolicy" path="external/sepolicy" remote="github" />
   <project name="CodeAndroidFiber/platform_external_skia" path="external/skia" remote="github" />
+  <project name="CodeAndroidFiber/platform_external_sonivox" path="external/sonivox" remote="github" />
   <project name="CodeAndroidFiber/platform_frameworks_av" path="frameworks/av" remote="github" />
   <project name="CodeAndroidFiber/platform_frameworks_base" path="frameworks/base" remote="github" />
+  <project name="CodeandroidFiber/platform_frameworks_minikin" path="frameworks/minikin" remote="github" />
   <project name="CodeAndroidFiber/platform_frameworks_native" path="frameworks/native" remote="github" />
   <project name="CodeAndroidFiber/platform_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="github" />
   <project name="CodeAndroidFiber/platform_hardware_qcom_audio" path="hardware/qcom/audio" remote="github" />
@@ -28,7 +33,13 @@
   <project name="CodeAndroidFiber/platform_hardware_qcom_camera" path="hardware/qcom/camera" remote="github" />
   <project name="CodeAndroidFiber/platform_hardware_qcom_wlan" path="hardware/qcom/wlan" remote="github" />
   <project name="CodeAndroidFiber/platform_hardware_ril" path="hardware/ril" remote="github" />
+  <project name="CodeandroidFiber/platform_packages_apps_CertInstaller" path="packages/apps/CertInstaller" remote="github" />
+  <project name="CodeAndroidFiber/platform_packages_apps_Exchange" path="packages/apps/Exchange" remote="github" />
+  <project name="CodeAndroidFiber/platform_packages_apps_UnifiedEmail" path="packages/apps/UnifiedEmail" remote="github" />
+  <project name="CodeAndroidFiber/platform_packages_providers_DownloadProvider" path="packages/providers/DownloadProvider" remote="github" />
+  <project name="CodeAndroidFiber/platform_packages_services_Telecomm" path="packages/services/Telecomm" remote="github" />
   <project name="CodeAndroidFiber/platform_packages_services_Telephony" path="packages/services/Telephony" remote="github" />
+  <project name="CodeAndroidFiber/platform_system_core" path="system/core" remote="github" />
 
   <!-- device -->
   <project name="CodeAndroidFiber/platform_device_qcom_common" path="device/qcom/common" remote="github">
@@ -63,7 +74,6 @@
   <project name="kernel/lk" path="bootable/bootloader/lk" revision="7d2adc35606c56036f32b4d1c3996183ae927be5" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/abi/cpp" path="abi/cpp" revision="36b381298a4efb7c293d394d8b1acbda68230989" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/bionic" path="bionic" revision="de49950f6d6e0a8ddaf834d07539683b148ac65d" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk" name="platform/bootable/recovery" path="bootable/recovery" revision="8dca08d0b27e75f3fb220765433399869c0c1cd9" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="cts,pdk-cw-fs" name="platform/cts" path="cts" revision="47206367488f017f1868fb6d6c312f5fa3ccbf3c" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/dalvik" path="dalvik" revision="236ee628716eef0df1ef89781942abae2bc7fd7c" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/developers/build" path="developers/build" revision="2bea00f1363ed1476e51be6c4df5c43e2b0ba092" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -103,7 +113,6 @@
   <project name="platform/external/curl" path="external/curl" revision="51915d4a70fad6236e59a0c63c8fc8936a8739f8" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/external/deqp" path="external/deqp" revision="cb5a98dbe818223be8786a1792954da8aeb72225" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/dexmaker" path="external/dexmaker" revision="fec7276299b950a8831ead9a9756d27e0fc60560" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk-cw-fs" name="platform/external/dhcpcd" path="external/dhcpcd" revision="a38d6f2b74d5953b3d7726415aef907eb3cde1f9" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/dnsmasq" path="external/dnsmasq" revision="c92f8a1a2ae9879e070ecc84949da23b60d62831" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/doclava" path="external/doclava" revision="0e47ee0be9991df8a200cdb418baa28de4a82410" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/external/donuts" path="external/donuts" revision="005389fb31a67841b5de42f0d25fbfab843e208c" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -246,12 +255,10 @@
   <project groups="pdk" name="platform/external/safe-iop" path="external/safe-iop" revision="aa0725fb1da35e47676b6da30009322eb5ed59be" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/scrypt" path="external/scrypt" revision="72691396f9fa84fd39cb72d031750e580e648aa3" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/external/selinux" path="external/selinux" revision="c3b220252ea64bbe168307c102c4da616e4cf63d" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk" name="platform/external/sepolicy" path="external/sepolicy" revision="69dc5863e17e67555f3c59f19e86430607a655d8" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk,qcom_msm8x26" name="platform/external/sfntly" path="external/sfntly" revision="a01a58c85ae6f0b1fe97e4a383bb7536285264d8" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/external/slf4j" path="external/slf4j" revision="7122d7eba20aeeaf319017b655271889f825f750" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/smali" path="external/smali" revision="15284127c9ed241f1de20fdd8cdb24cb12cd2119" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/sonic" path="external/sonic" revision="10c16fc60582d7e8bcf7533793871485d339e241" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk" name="platform/external/sonivox" path="external/sonivox" revision="91324c66ccbc64ff8072b864ab2e518c7eac0254" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/speex" path="external/speex" revision="ff03110e77ec7fe716c5be11783746f59c814e30" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/sqlite" path="external/sqlite" revision="2fb3da9fbbc58c78b92c00f6e5fea77f37c57faa" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/squashfs-tools" path="external/squashfs-tools" revision="1a710ff698178fbf71251395c4c96e3e7e73e2ed" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -286,7 +293,6 @@
   <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/data-binding" path="frameworks/data-binding" revision="810f30b199a514adfd019365f521723c7cbfe27a" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/ex" path="frameworks/ex" revision="8d069cf9807027f7b3148589292f8f0544179ebf" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/mff" path="frameworks/mff" revision="b9669b8540a1e5c953374d53b115514335e23c27" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk-cw-fs" name="platform/frameworks/minikin" path="frameworks/minikin" revision="6bc63c58601f913149a777ce7d78c0918b29c2f3" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/ml" path="frameworks/ml" revision="e0721529b9662b5ffb6cc7daf5b097720f5eb3e8" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/multidex" path="frameworks/multidex" revision="805db15e4d7baa57062ad08fb03eeac8691475c8" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/frameworks/opt/bitmap" path="frameworks/opt/bitmap" revision="856e2a9d72fe3a79cd7bfa5cf443d13a60495c4b" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -333,14 +339,12 @@
   <project name="platform/packages/apps/Camera2" path="packages/apps/Camera2" revision="343059ac102432d9c75354c7a043bb64e284326e" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/CarrierConfig" path="packages/apps/CarrierConfig" revision="4f9ec8fa8079ebe6c67d7376004403729c59ad7b" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/CellBroadcastReceiver" path="packages/apps/CellBroadcastReceiver" revision="5ed205c0ac45876a957bf112b27a0477fbad5e30" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk-cw-fs" name="platform/packages/apps/CertInstaller" path="packages/apps/CertInstaller" revision="1b6512397a6cf67379c026b8523f83f751eab654" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/Contacts" path="packages/apps/Contacts" revision="bd51a791d89f5b6e983d08951a490f435956bc77" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/ContactsCommon" path="packages/apps/ContactsCommon" revision="1725df6a3dc13bf5671baa39d6818ba32485bf39" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/DeskClock" path="packages/apps/DeskClock" revision="d9a947477d6af51eeab6522a39a772ea08e0faa4" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/Dialer" path="packages/apps/Dialer" revision="ba6a328a18bdebdcb41a84d8cad02513dfc14395" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/Email" path="packages/apps/Email" revision="473c27334f73dc1c278e63e7f3f901f596a35c2d" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/ExactCalculator" path="packages/apps/ExactCalculator" revision="e7b12ff4c0d50d03663ac26547774827d55b050e" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project name="platform/packages/apps/Exchange" path="packages/apps/Exchange" revision="32c5762f6ad014d5894a2abcdea00a43f674b4c7" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/FMRadio" path="packages/apps/FMRadio" revision="dba64281d9114b97fd14f7f69dfc3ba515aadf53" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/Gallery" path="packages/apps/Gallery" revision="2b16852c9d910d92a84a72908fc2f796a1f581e9" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/Gallery2" path="packages/apps/Gallery2" revision="05c7e6baaa3237e91ece8b85187f4226144928fb" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -373,7 +377,6 @@
   <project name="platform/packages/apps/Tag" path="packages/apps/Tag" revision="77962a664578443811e76d26024a534e7acf1274" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/Terminal" path="packages/apps/Terminal" revision="5b68e8ad082625206492ca9baf889f8c5427eb01" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/TvSettings" path="packages/apps/TvSettings" revision="d278b2d8538a22cc063ebc68ffe5c141f29465e5" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project name="platform/packages/apps/UnifiedEmail" path="packages/apps/UnifiedEmail" revision="c5a43b53155c4ca073e5e60a227c7c45a671b7c6" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/experimental" path="packages/experimental" revision="7b02b6bbaf0b4330ac05fda8cd47f4044ee2740a" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/inputmethods/LatinIME" path="packages/inputmethods/LatinIME" revision="3e2c3f16cbcfcfb95c4c04cd0c7cb2007698b261" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/inputmethods/OpenWnn" path="packages/inputmethods/OpenWnn" revision="59aefa242169b7a51c2381daee58ff22fd1834ce" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -382,7 +385,6 @@
   <project groups="pdk-cw-fs" name="platform/packages/providers/CalendarProvider" path="packages/providers/CalendarProvider" revision="51fb9409c5034d81b48879555ad8a3dbb35342d6" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/providers/CallLogProvider" path="packages/providers/CallLogProvider" revision="6f3b34eb071990498f7523e7feccc19f542a8c45" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/packages/providers/ContactsProvider" path="packages/providers/ContactsProvider" revision="f17164df0eb87df00013be86f05b66797ff48f56" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk-cw-fs" name="platform/packages/providers/DownloadProvider" path="packages/providers/DownloadProvider" revision="d511d5dbd3a4547ab65f7ba7a36dc50754b8cb38" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/packages/providers/MediaProvider" path="packages/providers/MediaProvider" revision="c10c883ad4655ef421215f080dc3bdea29402003" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/providers/PartnerBookmarksProvider" path="packages/providers/PartnerBookmarksProvider" revision="96d0a80af45923767baf449fc8c735c2f71d64ae" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/providers/TelephonyProvider" path="packages/providers/TelephonyProvider" revision="0add1d754ce14437bd1f106996e5175fe20fc569" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -392,7 +394,6 @@
   <project name="platform/packages/screensavers/PhotoTable" path="packages/screensavers/PhotoTable" revision="d88473aef04cfaf0188f2441cb3b146d1428b320" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/screensavers/WebView" path="packages/screensavers/WebView" revision="6e0a80f6faed6191acc8ce1b6c79eada09e9e042" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/services/Mms" path="packages/services/Mms" revision="c13ab2f3961150c5645af84bf2590a03df3dbc2b" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project name="platform/packages/services/Telecomm" path="packages/services/Telecomm" revision="5cd5df1c32ee2f8c5f64242ea7257ceb0865e9ab" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/wallpapers/Basic" path="packages/wallpapers/Basic" revision="da800df96de13d852da64398958a7f258e3e3589" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/wallpapers/Galaxy4" path="packages/wallpapers/Galaxy4" revision="83ce967f34f1b099fafef55d5c23ba4aea78dd64" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/wallpapers/HoloSpiral" path="packages/wallpapers/HoloSpiral" revision="5109d6b923137014cd2721c600e8bacb4eba2484" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -434,7 +435,6 @@
   <project groups="pdk,tools" name="platform/prebuilts/tools" path="prebuilts/tools" revision="f32d460e38a2354a060d2e918836bd745ec49f55" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/sdk" path="sdk" revision="3c9c2be94a1b36a7e01c9011966137badee8b843" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/system/bt" path="system/bt" revision="343625dab2e18b8eea7cffb034ebd16e209b0d3d" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk" name="platform/system/core" path="system/core" revision="09ac41128e07c95b8cc9967c5f5a457fc4c08ada" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/system/extras" path="system/extras" revision="9e403fb877fde60d7e628a6ec99a89853e621f77" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/system/gatekeeper" path="system/gatekeeper" revision="e547f93b0089f12c78d33b83e5f49fdb0e0c85bc" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/system/keymaster" path="system/keymaster" revision="96c1c49608486cb30c3915c1a456a5330e95ba4e" upstream="LA.BF.1.1.3_rb1.12"/>
