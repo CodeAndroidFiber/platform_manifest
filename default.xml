@@ -15,8 +15,14 @@
   <project name="CodeAndroidFiber/platform_build" path="build" remote="github" >
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
+  <project name="CodeAndroidFiber/platform_external_conscrypt" path="external/conscrypt" remote="github" />
+  <project name="CodeandroidFiber/platform_external_libavc" path="external/libavc" remote="github" />
+  <project name="CodeAndroidFiber/platform_external_libmpeg2" path="external/libmpeg2" remote="github" />
   <project name="CodeAndroidFiber/platform_external_skia" path="external/skia" remote="github" />
+  <project name="CodeAndroidFiber/platform_frameworks_av" path="frameworks/av" remote="github" />
   <project name="CodeAndroidFiber/platform_frameworks_base" path="frameworks/base" remote="github" />
+  <project name="CodeAndroidFiber/platform_frameworks_native" path="frameworks/native" remote="github" />
+  <project name="CodeAndroidFiber/platform_frameworks_opt_telephony" path="frameworks/opt/telephony" remote="github" />
   <project name="CodeAndroidFiber/platform_hardware_qcom_audio" path="hardware/qcom/audio" remote="github" />
   <project name="CodeAndroidFiber/platform_hardware_qcom_bt" path="hardware/qcom/bt" remote="github" />
   <project name="CodeAndroidFiber/platform_hardware_qcom_camera" path="hardware/qcom/camera" remote="github" />
@@ -93,7 +99,6 @@
   <project groups="pdk" name="platform/external/clang" path="external/clang" revision="6270ca65199882c73aa9699d8fbeb580870e8d30" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/external/cmockery" path="external/cmockery" revision="77b7379c087dd5e6383aa502e36428adcdd46aab" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/compiler-rt" path="external/compiler-rt" revision="fac9cf04de37e07f307faef7cd322cad4e208bcd" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk-cw-fs" name="platform/external/conscrypt" path="external/conscrypt" revision="58154e593fe2bcd1a2ef3d70f1f96453bd5d77c3" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/external/crcalc" path="external/crcalc" revision="9666c57ab247046b716e9c1e56f0dcc7d4a1545f" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/external/curl" path="external/curl" revision="51915d4a70fad6236e59a0c63c8fc8936a8739f8" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/external/deqp" path="external/deqp" revision="cb5a98dbe818223be8786a1792954da8aeb72225" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -161,7 +166,6 @@
   <project groups="pdk-cw-fs" name="platform/external/junit" path="external/junit" revision="7e5a2e79b848a8c0373d65f2324f5f999a458518" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/kernel-headers" path="external/kernel-headers" revision="d5a1ad2bdf2607752b3841681a01db403f8b4aa1" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/ksoap2" path="external/ksoap2" revision="f13853ff0fa5eb65afc847176e55ca6db293eb3c" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk" name="platform/external/libavc" path="external/libavc" revision="e8e15d345e74a0107e61753242df6dd5605fcc5c" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/libcap-ng" path="external/libcap-ng" revision="52447887e50b49f33f959077c31232edff6659d8" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/libcxx" path="external/libcxx" revision="076df933eb2d98152218b874abfa91cba660bcbd" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/libcxxabi" path="external/libcxxabi" revision="b451069aab57ccfe64c0fc7a18cfc487862fe985" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -171,7 +175,6 @@
   <project groups="pdk" name="platform/external/libgsm" path="external/libgsm" revision="1e26679795597459732408891bedea130b3ee1f1" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/external/libhevc" path="external/libhevc" revision="912027d08fbce3cbc9444194ac11a023d5c9694c" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/liblzf" path="external/liblzf" revision="6946aa575b0949d045722794850896099d937cbb" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk" name="platform/external/libmpeg2" path="external/libmpeg2" revision="0ba16e0057a6fa4b4022d0e77e8186d551434f0d" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/libmtp" path="external/libmtp" revision="e204c41bf49cadc1de460f0cf902008955b356d9" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/libnfc-nci" path="external/libnfc-nci" revision="00e6fd9e588477bb91e79bcc8b9ceddadc4fdd72" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/external/libnfc-nxp" path="external/libnfc-nxp" revision="76f8fa7177767cb377f9212e207e3ac16f9b8d48" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -277,7 +280,6 @@
   <project groups="pdk" name="platform/external/zlib" path="external/zlib" revision="a15adad27b1a33de2f4c788809ba97cff726cf58" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/zopfli" path="external/zopfli" revision="bb96afe13a50bfc17259dcf56f44e997923c705c" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/zxing" path="external/zxing" revision="d2256df36df8778a3743e0a71eab0cc5106b98c9" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk" name="platform/frameworks/av" path="frameworks/av" revision="45d276dc90b4f97207520f533ee930364c8d05ff" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc" revision="b7f05114e5f408479b50647837cdf25187bfd164" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker" revision="8c10afdc806cbb9d4560e90b100f0dcefdd46a21" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/frameworks/compile/slang" path="frameworks/compile/slang" revision="99ea89ee558c3917383468febeef186df2e6a76c" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -287,7 +289,6 @@
   <project groups="pdk-cw-fs" name="platform/frameworks/minikin" path="frameworks/minikin" revision="6bc63c58601f913149a777ce7d78c0918b29c2f3" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/ml" path="frameworks/ml" revision="e0721529b9662b5ffb6cc7daf5b097720f5eb3e8" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/multidex" path="frameworks/multidex" revision="805db15e4d7baa57062ad08fb03eeac8691475c8" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk" name="platform/frameworks/native" path="frameworks/native" revision="56da4dbd1160ed9079f7946bc4e205454380e69f" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/frameworks/opt/bitmap" path="frameworks/opt/bitmap" revision="856e2a9d72fe3a79cd7bfa5cf443d13a60495c4b" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/opt/bluetooth" path="frameworks/opt/bluetooth" revision="ee991e9ed86e90ba56e56b9e05c89012097972d4" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/opt/calendar" path="frameworks/opt/calendar" revision="03b18577f8f8f799e87a62b8e03889ddacf6daa2" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -304,7 +305,6 @@
   <project groups="pdk" name="platform/frameworks/opt/net/wifi" path="frameworks/opt/net/wifi" revision="acfb6fd0dfcf5902294b417feee7506ed6174d3f" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/opt/photoviewer" path="frameworks/opt/photoviewer" revision="c028dc87931bb0f3dcd0aa6804d82419fad5311a" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/opt/setupwizard" path="frameworks/opt/setupwizard" revision="f84c9e10f7cc2feae2148774633d340d8d45eefe" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk" name="platform/frameworks/opt/telephony" path="frameworks/opt/telephony" revision="5b860540ab771bc61d5a6f72d0914458c06431fc" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/opt/timezonepicker" path="frameworks/opt/timezonepicker" revision="5239cd34f235eb30c765401bd0327407a9d7dbf4" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/opt/vcard" path="frameworks/opt/vcard" revision="22b057b0863763c2f4634935dd09c15e3f1e11d7" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/frameworks/opt/widget" path="frameworks/opt/widget" revision="466e0e0307b3f6aa4f4be3d9419b5996bd389da5" upstream="LA.BF.1.1.3_rb1.12"/>
