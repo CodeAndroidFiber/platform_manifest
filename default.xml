@@ -23,6 +23,7 @@
   <project name="CodeAndroidFiber/platform_external_flac" path="external/flac" remote="github" />
   <project name="CodeandroidFiber/platform_external_libavc" path="external/libavc" remote="github" />
   <project name="CodeAndroidFiber/platform_external_libmpeg2" path="external/libmpeg2" remote="github" />
+  <project name="CodeandroidFiber/platform_external_libvpx" path="external/libvpx" remote="github"/>
   <project name="CodeAndroidFiber/platform_external_sepolicy" path="external/sepolicy" remote="github" />
   <project name="CodeAndroidFiber/platform_external_skia" path="external/skia" remote="github" />
   <project name="CodeAndroidFiber/platform_external_sonivox" path="external/sonivox" remote="github" />
@@ -35,11 +36,13 @@
   <project name="CodeAndroidFiber/platform_hardware_qcom_audio" path="hardware/qcom/audio" remote="github" />
   <project name="CodeAndroidFiber/platform_hardware_qcom_bt" path="hardware/qcom/bt" remote="github" />
   <project name="CodeAndroidFiber/platform_hardware_qcom_camera" path="hardware/qcom/camera" remote="github" />
+  <project name="CodeandroidFiber/platform_hardware_qcom_media" path="hardware/qcom/media" remote="github" />
   <project name="CodeAndroidFiber/platform_hardware_qcom_wlan" path="hardware/qcom/wlan" remote="github" />
   <project name="CodeAndroidFiber/platform_hardware_ril" path="hardware/ril" remote="github" />
   <project name="CodeandroidFiber/platform_packages_apps_CertInstaller" path="packages/apps/CertInstaller" remote="github" />
   <project name="CodeandroidFiber/platform_packages_apps_Email" path="packages/apps/Email" remote="github" />
   <project name="CodeAndroidFiber/platform_packages_apps_Exchange" path="packages/apps/Exchange" remote="github" />
+  <project name="Codeandroidfiber/platform_packages_apps_PackageInstaller" path="packages/apps/PackageInstaller" remote="github" />
   <project name="CodeAndroidFiber/platform_packages_apps_UnifiedEmail" path="packages/apps/UnifiedEmail" remote="github" />
   <project name="CodeAndroidFiber/platform_packages_providers_DownloadProvider" path="packages/providers/DownloadProvider" remote="github" />
   <project name="CodeAndroidFiber/platform_packages_services_Telecomm" path="packages/services/Telecomm" remote="github" />
@@ -205,7 +208,6 @@
   <project groups="pdk-cw-fs" name="platform/external/libutf" path="external/libutf" revision="7469493bff47a84a6041cba80df50bbbe08cd656" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/libvncserver" path="external/libvncserver" revision="54fc82147d8ea715bf2864246453d325bf546608" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/libvorbis" path="external/libvorbis" revision="61a5b54ff699f0cd339121c14432d0d2517907b1" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="pdk" name="platform/external/libvpx" path="external/libvpx" revision="b6919dc5bef6217eaa664dd4085da1fe62925582" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/libvterm" path="external/libvterm" revision="6d78f36633063dad0689ca42be1ad8d0313ebfab" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk-cw-fs" name="platform/external/libxml2" path="external/libxml2" revision="8eadaf82488fe3c7a106bb17e335447bef5c9bec" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="libyuv,pdk-cw-fs" name="platform/external/libyuv" path="external/libyuv" revision="613f94db72ea295b8e7040f508ea0bbb782714a2" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -327,7 +329,6 @@
   <project groups="qcom,default" name="platform/hardware/qcom/display" path="hardware/qcom/display" revision="613b8c890106aefc211f2687a4a162a3db57c070" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="qcom,default" name="platform/hardware/qcom/gps" path="hardware/qcom/gps" revision="8c74bdeda71c337baeaa3464213792ce505edc9e" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="qcom" name="platform/hardware/qcom/keymaster" path="hardware/qcom/keymaster" revision="621e017384d2225b6f7cf465995523a13574bc25" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project groups="qcom,default" name="platform/hardware/qcom/media" path="hardware/qcom/media" revision="dbbc87bad99d6fd4f0b0c693191f4870cf7ded0b" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="qcom,default" name="platform/hardware/qcom/sensors" path="hardware/qcom/sensors" revision="b1fa2fa744d26a7eaa3ff1988dd8a32c45f0df54" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/libcore" path="libcore" revision="295781a70ff1e5e404313bea17424444a0375fcb" upstream="LA.BF.1.1.3_rb1.12"/>
   <project groups="pdk" name="platform/libnativehelper" path="libnativehelper" revision="b7a25286026b49f0f7d95b25f2d32c4f47f498ef" upstream="LA.BF.1.1.3_rb1.12"/>
@@ -362,7 +363,6 @@
   <project name="platform/packages/apps/MusicFX" path="packages/apps/MusicFX" revision="914308e6d79c2f371838f767aa646d5a4b3bacaf" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/Nfc" path="packages/apps/Nfc" revision="b16594f79728e9e54d632087207741b09cb026b4" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/OneTimeInitializer" path="packages/apps/OneTimeInitializer" revision="01e429c08e51291315890de9677151a7e0b6ad35" upstream="LA.BF.1.1.3_rb1.12"/>
-  <project name="platform/packages/apps/PackageInstaller" path="packages/apps/PackageInstaller" revision="d46afe0970c096a16c09c69499f15aa060602e19" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/Phone" path="packages/apps/Phone" revision="79731f02b7009206a01182d2cca15dfc8491da09" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/PhoneCommon" path="packages/apps/PhoneCommon" revision="088e03bd42fce14f617f38d480b30fa1dbef4b31" upstream="LA.BF.1.1.3_rb1.12"/>
   <project name="platform/packages/apps/Protips" path="packages/apps/Protips" revision="ec5d268260d97499dd45849e29e8c4f5e75dd539" upstream="LA.BF.1.1.3_rb1.12"/>
